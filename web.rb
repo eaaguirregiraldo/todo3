@@ -2,9 +2,9 @@ require 'rubygems'
 require 'sinatra'
 require 'make_todo'
 
-get '/?' do  
+get '/' do  
   @items = Tarea.all
-  redirect '/new' if @items.empty?
+  #redirect '/new' if @items.empty?
   erb :index
 end
 
